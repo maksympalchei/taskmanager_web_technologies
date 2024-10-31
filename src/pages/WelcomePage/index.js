@@ -1,57 +1,17 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import cn from 'classnames';
-
-import styles from './index.module.scss';
-
-export function WelcomePage(props) {
+import UnauthorizedSidebar from '..//..//modules/UnauthorizedSidebar';
+import styles from './index.module.css';
+import { Link } from 'react-router-dom';
+function MainPage(props) {
   return (
-    <section
-      className={cn(styles['task-management-section'], props.className, 'welcome-page')}
-      style={{ '--src': `` }}>
-      {/* Main task management interface */}
-
-      <div className={styles['layout-container']}>
-        <aside className={styles.sidebar}>
-          <div className={styles['sidebar-content']}>
-            <p className={styles['app-logo']}>TaskM</p>
-
-            <nav className={styles['nav-menu']}>
-              {/* Navigation menu */}
-              <button className={styles['dashboard-btn']}>
-                {/* TODO */}
-                Dashboard
-              </button>
-              <button className={styles['team-btn']}>
-                {/* TODO */}
-                Team
-              </button>
-              <button className={styles['tasks-btn']}>
-                {/* TODO */}
-                Tasks     
-              </button>
-
-              <div className={styles['invite-wrapper']}>
-                <button className={styles['invites-btn']}>
-                  {/* TODO */}
-                  Invites
-                </button>
-              </div>
-
-              <button className={styles['settings-btn']}>
-                {/* TODO */}
-                Settings
-              </button>
-              <button className={styles['login-btn']}>
-                {/* TODO */}
-                Login
-              </button>
-            </nav>
-          </div>
-        </aside>
-
-        <main className={styles['main-content']}>
-          <div className={styles['welcome-container']}>
-            <article className={styles['welcome-msg']}>
+    <section className={cn(styles['task-manager-section'], props.className, 'main-page')}>
+      <div className={styles['app-container']}>
+        <UnauthorizedSidebar />
+        <article className={styles['welcome-content']}>
+          <div className={styles['welcome-wrapper']}>
+            <p className={styles['welcome-msg']}>
               Welcome to TaskM!
               <br />
               <br />
@@ -64,21 +24,25 @@ export function WelcomePage(props) {
               <br />
               <br />
               Get started now and take control of your to-do list!
-            </article>
+            </p>
 
-            <div className={styles['action-btns']}>
-              <button className={styles['sign-in-btn']}>
-                {/* TODO */}
+            <div className={styles['auth-actions']}>
+              <Link to="/signin" className={styles['signin-btn']}>
                 SIGN IN
-              </button>
-              <button className={styles['sign-up-btn']}>
-                {/* TODO */}
+              </Link>
+              <Link to="/signup" className={styles['signup-btn']}>
                 SIGN UP
-              </button>
+              </Link>
             </div>
           </div>
-        </main>
+        </article>
       </div>
     </section>
   );
 }
+
+MainPage.propTypes = {
+  className: PropTypes.string
+};
+
+export default MainPage;

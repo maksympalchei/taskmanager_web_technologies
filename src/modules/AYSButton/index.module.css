@@ -1,0 +1,52 @@
+.action-controls {
+  display: flex;
+  gap: 0 25px;
+  margin: 54px 20px 8px 35px;
+}
+
+.company-logo {
+  margin: 0 0 46px;
+  width: 48px;
+  min-width: 0;
+}
+.text{
+  display: flex;
+  gap: 0 20px;
+  font-size: 35px;
+}
+.confirm-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 24px 0 0;
+  min-width: 117px;
+  font: 700 20px/1.16 "Josefin Sans", Helvetica, Arial, serif;
+  color: rgb(255 255 255);
+  text-align: center;
+  background-color: rgb(0 0 0);
+  border-radius: 35px;
+  padding: 23px 0;
+  outline: 1px solid rgb(255 255 255);
+  outline-offset: -1px;
+  box-shadow: 0 7px 15px 0 rgb(0 0 0 / 10%);
+  letter-spacing: 3.2px;
+}
+
+.decline-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 24px 0 0;
+  min-width: 117px;
+  font: 700 20px/1.16 "Josefin Sans", Helvetica, Arial, serif;
+  color: rgb(0 0 0);
+  text-align: center;
+  background-color: rgb(255 255 255);
+  border-radius: 35px;
+  padding: 23px 0;
+  outline: 1px solid rgb(217 217 217);
+  outline-offset: -1px;
+  box-shadow: 0 7px 15px 0 rgb(0 0 0 / 10%);
+  letter-spacing: 3.2px;
+  text-shadow: 0 0 4px #d9d9d9;
+}

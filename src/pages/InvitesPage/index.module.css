@@ -1,22 +1,19 @@
-@use "../utils" as *;
-
-.task-management-section {
+.app-container-section {
   display: flex;
-  flex-direction: column;
-  background: var(--src) 5.73% 50.3% / 1.81% no-repeat;
-  background-color: rgb(255 255 255);
-  overflow: hidden;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
 }
 
-.layout-container {
+.layout-wrapper {
   display: flex;
   justify-content: space-between;
   gap: 0 10px;
   margin: 32px 10px;
-  padding: 0 23px 0 0;
 }
 
-.sidebar {
+.sidebar-container {
   display: flex;
   flex-direction: column;
   width: 340px;
@@ -25,7 +22,7 @@
   border-radius: 30px;
 }
 
-.sidebar-content {
+.nav-menu {
   display: flex;
   flex-direction: column;
   gap: 78px 0;
@@ -33,7 +30,7 @@
   width: 73.53%;
 }
 
-.app-logo {
+.brand-title {
   z-index: 1;
   display: flex;
   justify-content: center;
@@ -42,7 +39,7 @@
   text-align: center;
 }
 
-.nav-menu {
+.nav-menu-list {
   display: flex;
   flex-direction: column;
 }
@@ -53,12 +50,12 @@
   justify-content: center;
   align-items: center;
   font: 700 20px/1 "Josefin Sans", Helvetica, Arial, serif;
-  color: rgb(255 255 255 / 40%);
+  color: rgb(255 255 255);
   text-align: center;
-  background-color: rgb(0 0 0 / 40.3%);
+  background-color: rgb(0 0 0);
   border-radius: 35px;
   padding: 25px 8px;
-  outline: 1px solid rgb(255 255 255 / 40.3%);
+  outline: 1px solid rgb(255 255 255);
   outline-offset: -1px;
 }
 
@@ -69,12 +66,12 @@
   align-items: center;
   margin: 16px 0 0;
   font: 700 20px/1 "Josefin Sans", Helvetica, Arial, serif;
-  color: rgb(255 255 255 / 40%);
+  color: rgb(255 255 255);
   text-align: center;
-  background-color: rgb(0 0 0 / 40.3%);
+  background-color: rgb(0 0 0);
   border-radius: 35px;
   padding: 25px 8px;
-  outline: 1px solid rgb(255 255 255 / 40.3%);
+  outline: 1px solid rgb(255 255 255);
   outline-offset: -1px;
 }
 
@@ -85,32 +82,27 @@
   align-items: center;
   margin: 16px 0 0;
   font: 700 20px/1 "Josefin Sans", Helvetica, Arial, serif;
-  color: rgb(255 255 255 / 40%);
+  color: rgb(255 255 255);
   text-align: center;
-  background-color: rgb(0 0 0 / 40.3%);
+  background-color: rgb(0 0 0);
   border-radius: 35px;
-  padding: 25px 8px 25px 38px;
-  outline: 1px solid rgb(255 255 255 / 40.3%);
+  padding: 25px 8px;
+  outline: 1px solid rgb(255 255 255);
   outline-offset: -1px;
-}
-
-.invite-wrapper {
-  display: flex;
-  flex-direction: column;
-  margin: 16px 0 0;
 }
 
 .invites-btn {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 16px 0 0;
   font: 700 20px/1 "Josefin Sans", Helvetica, Arial, serif;
-  color: rgb(255 255 255 / 40%);
+  color: rgb(0 0 0);
   text-align: center;
-  background-color: rgb(0 0 0 / 40.3%);
+  background-color: rgb(255 255 255);
   border-radius: 35px;
   padding: 25px 8px;
-  outline: 1px solid rgb(255 255 255 / 40.3%);
+  outline: 1px solid rgb(255 255 255);
   outline-offset: -1px;
 }
 
@@ -120,16 +112,16 @@
   align-items: center;
   margin: 16px 0 0;
   font: 700 20px/1 "Josefin Sans", Helvetica, Arial, serif;
-  color: rgb(255 255 255 / 40%);
+  color: rgb(255 255 255);
   text-align: center;
-  background-color: rgb(0 0 0 / 40.3%);
+  background-color: rgb(0 0 0);
   border-radius: 35px;
   padding: 25px 8px;
-  outline: 1px solid rgb(255 255 255 / 40.3%);
+  outline: 1px solid rgb(255 255 255);
   outline-offset: -1px;
 }
 
-.login-btn {
+.logout-btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -147,63 +139,29 @@
 .main-content {
   display: flex;
   flex-direction: column;
-  width: 1020px;
+  width: 1400px;
   min-width: 0;
-  background-color: rgb(196 255 214);
-  border-radius: 40px;
+  padding: 0 23px 0 0;
 }
 
-.welcome-container {
+.content-header {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 93px 0;
-  margin: 200px auto 37px;
-  width: 92.06%;
+  background-color: rgb(139 196 138);
+  border-radius: 40px 40px 0 0;
 }
 
-.welcome-msg {
-  z-index: 1;
-  display: flex;
-  align-items: center;
-  width: 100%;
-  font: 700 40px/1 "Josefin Sans", Helvetica, Arial, serif;
-  color: rgb(0 0 0);
-}
-
-.action-btns {
-  display: flex;
-  gap: 0 21px;
-  width: 55.48%;
-}
-
-.sign-in-btn {
+.page-title {
   display: flex;
   justify-content: center;
-  align-items: center;
-  min-width: 250px;
-  font: 700 20px/1.16 "Josefin Sans", Helvetica, Arial, serif;
+  margin: 41px auto 38px;
+  font: 700 20px/1 "Josefin Sans", Helvetica, Arial, serif;
   color: rgb(0 0 0);
   text-align: center;
-  background-color: rgb(255 255 255);
-  border-radius: 35px;
-  padding: 23px 8px;
-  box-shadow: 0 7px 15px 0 rgb(0 0 0 / 10%);
-  letter-spacing: 3.2px;
 }
 
-.sign-up-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-width: 250px;
-  font: 700 20px/1.16 "Josefin Sans", Helvetica, Arial, serif;
-  color: rgb(0 0 0);
-  text-align: center;
-  background-color: rgb(245 245 247);
-  border-radius: 35px;
-  padding: 23px 8px;
-  outline: 1px solid rgb(255 255 255);
-  outline-offset: -1px;
-  letter-spacing: 3.2px;
+.content-divider {
+  min-height: 1015px;
+  background-color: rgb(217 217 217);
+  border-radius: 0 0 40px 40px;
 }
