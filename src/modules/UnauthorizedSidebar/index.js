@@ -33,9 +33,6 @@ function WelcomePage(props) {
             <button className={cn(styles['btn'], { [styles.active]: isActive('/settings') })}>
               Settings
             </button>
-            <button className={styles['login-btn']}>
-              Login
-            </button>
           </nav>
         </div>
       </aside>

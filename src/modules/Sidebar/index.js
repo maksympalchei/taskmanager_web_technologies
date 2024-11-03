@@ -1,12 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
-import { useLocation, Link } from 'react-router-dom';
+import { useLocation, useNavigate, Link } from 'react-router-dom';
 import styles from './index.module.css';
+import useAuth from '../../hooks/useAuth';
 
 function WelcomePage(props) {
   const location = useLocation();
   const isActive = (path) => location.pathname === path;
+  const { logout } = useAuth();
+  const navigate = useNavigate();
+
+  const handleLogout = async () => {
+    await logout();
+    navigate('/');
+  };
 
   return (
     <section
@@ -33,7 +41,7 @@ function WelcomePage(props) {
             <Link to="/settings" className={cn(styles['btn'], { [styles.active]: isActive('/settings') })}>
               Settings
             </Link>
-            <button className={styles['login-btn']}>
+            <button className={styles['login-btn']} onClick={handleLogout}>
               Logout
             </button>
           </nav>

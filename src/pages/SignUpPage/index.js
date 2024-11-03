@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
 import styles from './index.module.css';
+import useAuth from '../../hooks/useAuth';
+import useFetchData from '../../hooks/useFetch';
 
 function SignUpPage(props) {
   const [formData, setFormData] = useState({
@@ -12,16 +14,46 @@ function SignUpPage(props) {
     password: '',
     confirmPassword: '',
   });
+  const { register, error, loading } = useAuth();
+  const { registerUser, createTeam, updateUser } = useFetchData('users');
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Submitted data:', formData);
+    if (formData.password !== formData.confirmPassword) {
+      console.error("Passwords don't match");
+      return;
+    }
+    try {
+      const user = await register(formData.login, formData.password, formData.firstName, formData.lastName);
+      console.log('User registered:', user);
+
+      await registerUser(user.uid, {
+        email: formData.login,
+        firstName: formData.firstName,
+        lastName: formData.lastName,
+        role: 'user',
+        teamId: null,
+      });
+  
+      const teamRef = await createTeam({
+        ownerId: user.uid,
+        name: `${formData.firstName}'s Team`,
+      });
+  
+      await updateUser(user.uid, { teamId: teamRef.id });
+  
+      navigate('/dashboard');
+    } catch (err) {
+      console.error(err.message);
+    }
   };
+  
 
   return (
     <section className={cn(styles['sign-up-form'], props.className, 'sign-up-page')}>
@@ -78,13 +110,14 @@ function SignUpPage(props) {
             />
           </div>
 
-          <button type="submit" className={styles['submit-btn']}>
-            <span className={styles['btn-text']}>Sign up</span>
+          <button type="submit" className={styles['submit-btn']} disabled={loading}>
+            <span className={styles['btn-text']}>{loading ? 'Signing Up...' : 'Sign Up'}</span>
           </button>
+          {error && <p className={styles['error-text']}>{error}</p>}
         </div>
 
         <Link to="/signin" className={styles['login-link']}>
-          I have account
+          I have an account
         </Link>
       </form>
     </section>

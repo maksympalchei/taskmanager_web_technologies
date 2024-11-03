@@ -8,8 +8,8 @@ import InvitesPage from './pages/InvitesPage';
 import SettingsPage from './pages/SettingsPage';
 import TeamPage from './pages/TeamPage';
 import TasksPage from './pages/TasksPage';
+import ProtectedRoute from './hooks/protectedRoute';
 import './App.css';
-
 
 function App() {
   return (
@@ -17,13 +17,47 @@ function App() {
       <Routes>
         <Route path="/" element={<WelcomePage />} />
         <Route path="/signin" element={<SignInPage />} />
-        <Route path="/signup" element={<SignUpPage />}/>
-        <Route path="/dashboard" element={<DashboardPage/>}/>
-        <Route path="/settings" element={<SettingsPage/>}/>
-        <Route path="/invites" element={<InvitesPage/>}/>
-        <Route path="/team" element={<TeamPage/>}/>
-        <Route path="/tasks" element={<TasksPage/>}>
-        </Route>
+        <Route path="/signup" element={<SignUpPage />} />
+        <Route
+          path="/dashboard"
+          element={
+            <ProtectedRoute>
+              <DashboardPage />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/settings"
+          element={
+            <ProtectedRoute>
+              <SettingsPage />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/invites"
+          element={
+            <ProtectedRoute>
+              <InvitesPage />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/team"
+          element={
+            <ProtectedRoute>
+              <TeamPage />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/tasks"
+          element={
+            <ProtectedRoute>
+              <TasksPage />
+            </ProtectedRoute>
+          }
+        />
       </Routes>
     </Router>
   );

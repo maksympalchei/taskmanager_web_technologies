@@ -3,20 +3,18 @@ import PropTypes from 'prop-types';
 import AlertCircle from '..//..//pictures/AlertCircle.png';
 import styles from './index.module.css';
 
-function AYSButton({ onCancel }) {
+function AYSButton({ onConfirm, onCancel }) {
   return (
     <div className={styles['action-controls']}>
       <div className={styles['text']}>
-      <img
-        className={styles['company-logo']}
-        src={AlertCircle}
-        alt="Alert"
+        <img
+          className={styles['company-logo']}
+          src={AlertCircle}
+          alt="Alert"
         />
-      <div>
-        Are you sure?
+        <div>Are you sure?</div>
       </div>
-      </div>
-      <button className={styles['confirm-btn']}>
+      <button className={styles['confirm-btn']} onClick={onConfirm}>
         Yes
       </button>
       <button className={styles['decline-btn']} onClick={onCancel}>
@@ -27,6 +25,7 @@ function AYSButton({ onCancel }) {
 }
 
 AYSButton.propTypes = {
+  onConfirm: PropTypes.func.isRequired,
   onCancel: PropTypes.func.isRequired,
 };
 

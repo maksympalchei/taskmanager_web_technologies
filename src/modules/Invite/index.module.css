@@ -12,16 +12,19 @@
 .user-info-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 17px 0;
   width: 439px;
+  margin-left: 40px;
 }
 
 .user-header {
   display: flex;
-  justify-content: space-between;
-  gap: 0 10px;
+  gap: 0 20px;
 }
-
+.no-inv {
+  text-align: center;
+  font-size: 20px;
+  margin: 20px;
+}
 .user-name {
   display: flex;
   align-items: center;
@@ -43,7 +46,7 @@
 .invite-msg {
   display: flex;
   align-items: center;
-  font: 500 12px/2 "Josefin Sans", Helvetica, Arial, serif;
+  font: 500 16px/2 "Josefin Sans", Helvetica, Arial, serif;
   color: rgb(255 255 255);
   letter-spacing: 0.1px;
 }

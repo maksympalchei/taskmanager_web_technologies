@@ -4,7 +4,14 @@
   background-color: rgb(255 255 255);
   overflow: hidden;
 }
-
+.task {
+  margin: 40px 40px 40px 40px;
+  outline-color: black;
+  outline-style: auto;
+  padding: 20px;
+  border-radius: 40px;
+  background-color: rgb(157, 194, 197);
+}
 .main-container {
 display: flex;
 justify-content: space-between;
@@ -232,6 +239,24 @@ padding: 0 23px 0 0;
   min-width: 0;
 }
 
+.task-btns {
+  display: flex;
+  justify-content: right;
+  gap: 30px;
+}
+.task-btn {
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 308px;
+    font: 500 20px / 1.2 "Josefin Sans", Helvetica, Arial, serif;
+    color: rgb(0 0 0);
+    text-align: center;
+    background-color: rgb(255 255 255);
+    border-radius: 14.4px;
+    padding: 2px 8px;
+    letter-spacing: 0.1px;
+}
 .todo-column {
   display: flex;
   flex-direction: column;
@@ -274,13 +299,19 @@ padding: 0 23px 0 0;
   background-color: rgb(255 165 0);
   border-radius: 40px 40px 0 0;
 }
+.content_box1 {
+  background-color: rgb(139 196 138);
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  border-radius: 40px 40px 0 0;
+}
 
 .done-column {
   z-index: 1;
   display: flex;
   flex-direction: column;
   margin: 43px 0 0;
-  background-color: rgb(139 196 138);
   border-radius: 40px 40px 0 0;
 }
 

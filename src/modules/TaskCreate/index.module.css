@@ -54,7 +54,11 @@
   border-radius: 8px;
   margin-right: 10px;
 }
-
+.errorfield {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .addBtn {
   width: 30px;
   height: 30px;
@@ -89,7 +93,7 @@
 }
 
 .doneBtn {
-  margin-top: 20px;
+  margin-top: 10px;
   width: 100%;
   padding: 10px;
   background-color: #000;

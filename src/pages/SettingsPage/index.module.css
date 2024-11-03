@@ -215,6 +215,9 @@
   letter-spacing: 3.2px;
   text-shadow: 0 0 4px #d9d9d9;
 }
+.status-message {
+  margin-top: 25px;
+}
 .modal-overlay {
   position: fixed;
   top: 0;

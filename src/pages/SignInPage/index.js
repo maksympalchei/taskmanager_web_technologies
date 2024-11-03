@@ -1,24 +1,34 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import styles from './index.module.css';
+import useAuth from '../../hooks/useAuth'; 
 
 function SignInPage(props) {
   const [formData, setFormData] = useState({
     login: '',
     password: '',
   });
+  const { login, error, loading } = useAuth();
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
-  };
+  };  
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Login data submitted:', formData);
+    try {
+      await login(formData.login, formData.password);
+      navigate('/dashboard');
+    } catch (err) {
+      console.error(err.message);
+    }
   };
+  
+  
 
   return (
     <section className={cn(styles['authentication-form'], props.className, 'sign-in-page')}>
@@ -49,9 +59,11 @@ function SignInPage(props) {
           />
         </div>
 
-        <button type="submit" className={styles['submit-btn']}>
-          <span className={styles['btn-label']}>Sign In</span>
+        <button type="submit" className={styles['submit-btn']} disabled={loading}>
+          <span className={styles['btn-label']}>{loading ? 'Signing In...' : 'Sign In'}</span>
         </button>
+
+        {error && <p className={styles['error-text']}>{error}</p>}
 
         <div className={styles['register-link']}>
           <Link to="/signup">I don’t have an account</Link>
