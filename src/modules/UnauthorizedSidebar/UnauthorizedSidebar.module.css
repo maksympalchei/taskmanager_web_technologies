@@ -1,0 +1,64 @@
+.task-management-section {
+  display: flex;
+  flex-direction: column;
+  background: var(--src) 5.73% 50.3% / 1.81% no-repeat;
+  background-color: rgb(255 255 255);
+  overflow: hidden;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 0 32px 10px;
+  width: 340px;
+  height: 1120px;
+  background-color: rgb(0 0 0);
+  border-radius: 30px;
+}
+
+.sidebar-content {
+  display: flex;
+  flex-direction: column;
+  gap: 78px 0;
+  margin: 48px auto 37px;
+  width: 73.53%;
+}
+
+.app-logo {
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  font: 700 64px/1 "Josefin Sans", Helvetica, Arial, serif;
+  color: rgb(255 255 255);
+  text-align: center;
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn {
+  z-index: 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 16px 0 0;
+  font: 700 20px/1 "Josefin Sans", Helvetica, Arial, serif;
+  color: rgb(47, 47, 47);
+  text-align: center;
+  background-color: rgb(0 0 0 / 40.3%);
+  border-radius: 35px;
+  padding: 25px 8px;
+  outline: 1px solid rgb(255 255 255 / 40.3%);
+  outline-offset: -1px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.invite-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 16px 0 0;
+}
+
+
