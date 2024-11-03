@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
-import Sidebar from '../../modules/Sidebar';
-import AYSButton from '../../modules/AYSButton';
+import Sidebar from '../../modules/Sidebar/Sidebar';
+import AYSButton from '../../modules/AYSButton/AYSButton';
 import useFetchData from '../../hooks/useFetch';
 import useAuth from '../../hooks/useAuth';
-import styles from './index.module.css';
+import styles from './SettingsPage.module.css';
 import avatar from '../../pictures/GenericAvatar.png';
 
 function SettingsPage(props) {

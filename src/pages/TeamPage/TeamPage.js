@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
-import Sidebar from '../../modules/Sidebar';
-import styles from './index.module.css';
+import Sidebar from '../../modules/Sidebar/Sidebar';
+import styles from './TeamPage.module.css';
 import { auth, db } from '../../firebase';
 import {getDoc, doc } from 'firebase/firestore';
-import fetchData from '..//..//hooks/useFetch';
+import fetchData from '../../hooks/useFetch';
 function TeamPage(props) {
+  // eslint-disable-next-line no-unused-vars
   const [userId,setUserId] = useState('');
   const [teamId, setTeamId] = useState('');
   const {getUserByEmail, addInvite } = fetchData('users');
@@ -31,7 +32,6 @@ function TeamPage(props) {
     try {
       const userDocRef = doc(db, 'users', userId);
       const userDoc = await getDoc(userDocRef);
-
       if (userDoc.exists()) {
         const userData = userDoc.data();
         const userTeamId = userData.teamId;

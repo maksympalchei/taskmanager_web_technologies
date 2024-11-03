@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
-import Sidebar from '../../modules/Sidebar';
-import styles from './index.module.css';
-import Invite from '../../modules/Invite';
+import Sidebar from '../../modules/Sidebar/Sidebar';
+import styles from './InvitesPage.module.css';
+import Invite from '../../modules/Invite/Invite';
 import { auth } from '../../firebase';
 
 function InvitesPage(props) {

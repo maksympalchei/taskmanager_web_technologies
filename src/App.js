@@ -1,13 +1,13 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; 
-import WelcomePage from './pages/WelcomePage';
-import SignInPage from './pages/SignInPage';
-import SignUpPage from './pages/SignUpPage';
-import DashboardPage from './pages/DashboardPage';
-import InvitesPage from './pages/InvitesPage';
-import SettingsPage from './pages/SettingsPage';
-import TeamPage from './pages/TeamPage';
-import TasksPage from './pages/TasksPage';
+import WelcomePage from './pages/WelcomePage/WelcomePage.js';
+import SignInPage from './pages/SignInPage/SignInPage.js';
+import SignUpPage from './pages/SignUpPage/SignUpPage.js';
+import DashboardPage from './pages/DashboardPage/DashboardPage.js';
+import InvitesPage from './pages/InvitesPage/InvitesPage.js';
+import SettingsPage from './pages/SettingsPage/SettingsPage.js';
+import TeamPage from './pages/TeamPage/TeamPage.js';
+import TasksPage from './pages/TasksPage/TasksPage.js';
 import ProtectedRoute from './hooks/protectedRoute';
 import './App.css';
 

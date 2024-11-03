@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
 import { useLocation } from 'react-router-dom';
-import styles from './index.module.css';
+import styles from './UnauthorizedSidebar.module.css';
 
 function WelcomePage(props) {
   const location = useLocation();

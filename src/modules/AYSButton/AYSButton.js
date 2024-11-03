@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import AlertCircle from '..//..//pictures/AlertCircle.png';
-import styles from './index.module.css';
+import styles from './AYSButton.module.css';
 
 function AYSButton({ onConfirm, onCancel }) {
   return (

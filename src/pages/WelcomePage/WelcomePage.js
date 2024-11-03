@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
-import UnauthorizedSidebar from '..//..//modules/UnauthorizedSidebar';
-import styles from './index.module.css';
+import UnauthorizedSidebar from '../../modules/UnauthorizedSidebar/UnauthorizedSidebar.js';
+import styles from './WelcomePage.module.css';
 import { Link } from 'react-router-dom';
 function MainPage(props) {
   return (

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
 import { Link, useNavigate } from 'react-router-dom';
-import styles from './index.module.css';
+import styles from './SignIn.module.css';
 import useAuth from '../../hooks/useAuth'; 
 
 function SignInPage(props) {

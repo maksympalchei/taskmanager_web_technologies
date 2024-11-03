@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { db } from '../../firebase';
 import { collection, getDocs, query, where } from 'firebase/firestore';
-import styles from './index.module.css';
+import styles from './Invite.module.css';
 
 function Invite({ recipientEmail }) {
   const [invites, setInvites] = useState([]);

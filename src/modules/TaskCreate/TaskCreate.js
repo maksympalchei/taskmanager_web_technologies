@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { collection, addDoc, serverTimestamp, doc, getDoc, query, where, getDocs } from 'firebase/firestore';
-import { db } from '..//..//firebase';
+import { db } from '../../firebase';
 import useAuth from '../../hooks/useAuth';
-import styles from './index.module.css';
+import styles from './TaskCreate.module.css';
 
 function TaskCreate({ onClose }) {
   const { user } = useAuth();

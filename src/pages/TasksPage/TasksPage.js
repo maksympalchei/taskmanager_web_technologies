@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
-import Sidebar from '../..//modules/Sidebar';
-import styles from './index.module.css';
+import Sidebar from '../../modules/Sidebar/Sidebar';
+import styles from './TasksPage.module.css';
 import { db, auth } from '../../firebase';
 import { collection, query, where, onSnapshot, updateDoc, doc, getDoc } from 'firebase/firestore';
 

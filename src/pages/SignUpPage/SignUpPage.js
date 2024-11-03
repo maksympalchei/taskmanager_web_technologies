@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
-import styles from './index.module.css';
+import styles from './SignUpPage.module.css';
 import useAuth from '../../hooks/useAuth';
 import useFetchData from '../../hooks/useFetch';
 

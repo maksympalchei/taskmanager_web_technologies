@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
 import { useLocation, useNavigate, Link } from 'react-router-dom';
-import styles from './index.module.css';
+import styles from './Sidebar.module.css';
 import useAuth from '../../hooks/useAuth';
 
 function WelcomePage(props) {

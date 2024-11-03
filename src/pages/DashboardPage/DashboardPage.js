@@ -2,13 +2,13 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
 import CustomCalendar from '../../modules/Calendar/Calendar';
-import Sidebar from '..//..//modules/Sidebar';
-import TaskCreate from '../../modules/TaskCreate';
+import Sidebar from '../../modules/Sidebar/Sidebar';
+import TaskCreate from '../../modules/TaskCreate/TaskCreate';
 import useAuth from '../../hooks/useAuth';
 import useFetchData from '../../hooks/useFetch';
 import { db } from '../../firebase';
 import { collection, query, where, onSnapshot } from 'firebase/firestore';
-import styles from './index.module.css';
+import styles from './DashboardPage.module.css';
 
 function DashboardScreen(props) {
   const { user } = useAuth();
