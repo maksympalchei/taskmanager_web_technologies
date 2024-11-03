@@ -1,0 +1,101 @@
+.sign-up-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 104px 0;
+  background-color: rgb(255 255 255);
+  overflow: hidden;
+}
+
+.form-header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: rgb(0 0 0);
+  box-shadow: 0 11px 25px 0 rgb(0 0 0 / 10%);
+}
+
+.form-title {
+  display: flex;
+  justify-content: center;
+  margin: 97px auto 95px;
+  width: 537.015625px;
+  max-width: 85%;
+  font: 700 103px/1.16 "Josefin Sans", Helvetica, Arial, serif;
+  color: rgb(0 0 0);
+  text-align: center;
+  letter-spacing: 14.18px;
+  text-shadow: 0 0 4px #fff;
+}
+
+.form-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px 0;
+  margin: 0 auto 262px;
+  width: 739.953125px;
+  max-width: 739.953125px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+}
+
+.input-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 23px 0;
+}
+
+.input-field, 
+.input-field1 {
+  width: 100%;
+  min-height: 68px;
+  border-radius: 34px;
+  border: none;
+  outline: none;
+  outline: 1px solid rgb(217 217 217);
+  padding: 12px 20px;
+  font: 400 18px/1.5 "Poppins", Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+  color: rgb(60 60 60);
+}
+
+.input-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.submit-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0 10px;
+  margin: 38px 0 0 2.5px;
+  width: 357px;
+  max-width: 100%;
+  background-color: rgb(217 217 217);
+  border-radius: 34px;
+  padding: 24px 31px 24px 32px;
+  border: none;
+  outline: none;
+}
+.submit-btn.btn-text {
+  margin: 0;
+  font: 400 20px/1 "Josefin Sans", Helvetica, Arial, serif;
+  color: rgb(0, 0, 0);
+}
+
+.login-link {
+  display: block;
+  margin-top: 15px;
+  text-align: center;
+  font: 400 16px/1.5 "Poppins", Helvetica, Arial, serif;
+  color: rgb(120 120 120);
+  letter-spacing: 1.6px;
+  text-decoration: none;
+}
